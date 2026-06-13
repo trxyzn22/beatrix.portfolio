@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+
+  <main class="project-page">
+
+    <a href="html.html" class="back-link">← Back to Projects</a>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="badges">
+        <span class="badge featured">Featured Project</span>
+        <span class="badge green">Open Source</span>
+        <span class="badge purple">Side Project</span>
+        <span class="badge blue">AI/ML</span>
+        <span class="badge green">Completed</span>
+      </div>
+
+      <h1>AI Job Scraper + Resume Optimizer</h1>
+
+        <p>
+        An AI-powered workflow that automates job discovery, job description analysis,
+        resume optimization, and result delivery. The system uses Slack as the trigger,
+        retrieves job data, processes job descriptions with an AI agent, updates a resume
+        document, and sends the optimized output back to Slack.
+        </p>
+    </section>
+
+    <!-- OVERVIEW + INFO -->
+    <section class="two-column">
+      <div class="content-card">
+        <h2>Overview</h2>
+        <p>
+        This project automates the job application preparation process by combining
+        web scraping, AI analysis, resume tailoring, and document automation. It helps
+        users quickly identify relevant job opportunities and generate a more targeted
+        resume based on the requirements of each job post.
+        </p>
+      </div>
+
+      <div class="content-card info-card">
+        <h2>Project Information</h2>
+
+        <div class="info-item">
+        <strong>Role</strong>
+        <p>Automation Developer</p>
+        <p>AI Workflow Designer</p>
+        </div>
+
+        <div class="info-item">
+        <strong>Project Type</strong>
+        <p>AI Automation System</p>
+        <p>Career Productivity Tool</p>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="content-card">
+      <h2>Technologies & Tools</h2>
+
+        <div class="tech-tags">
+        <span>n8n</span>
+        <span>OpenAI</span>
+        <span>AI Agent</span>
+        <span>Slack API</span>
+        <span>Google Drive</span>
+        <span>Google Docs</span>
+        <span>HTTP Request</span>
+        <span>Document Parser</span>
+        <span>Structured Output Parser</span>
+        <span>Workflow Automation</span>
+        </div>
+
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="content-card">
+      <h2>Challenges & Solutions</h2>
+
+      <div class="challenge">
+        <h3>Automating Job Data Collection</h3>
+        <p><strong>Challenge:</strong> Job post information needed to be collected and processed without manually copying descriptions from multiple sources.</p>
+        <p><strong class="solution">Solution:</strong> Built an automated scraping workflow using HTTP requests and loop processing to retrieve and organize job post data.</p>
+        </div>
+
+        <div class="challenge">
+        <h3>Matching Resume Content to Job Requirements</h3>
+        <p><strong>Challenge:</strong> Generic resumes often fail to highlight the most relevant skills for each specific job posting.</p>
+        <p><strong class="solution">Solution:</strong> Used an AI agent to analyze job descriptions and generate targeted resume improvements based on role requirements.</p>
+        </div>
+
+        <div class="challenge">
+        <h3>Automated Document Updating</h3>
+        <p><strong>Challenge:</strong> Resume updates needed to be saved into a usable document format without manual formatting.</p>
+        <p><strong class="solution">Solution:</strong> Connected Google Drive and Google Docs to copy, update, and store optimized resume versions automatically.</p>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="content-card">
+      <h2>Architecture & System Design</h2>
+
+      <div class="architecture-grid">
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Slack Trigger</div>
+        <p>User sends a command or message to start the job scraping workflow.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Job Scraper</div>
+        <p>HTTP request retrieves job post data and loops through available listings.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">AI Resume Optimizer</div>
+        <p>AI agent analyzes the job description and creates tailored resume improvements.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Google Docs Output</div>
+        <p>Optimized resume content is copied, updated, and saved as a new document.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Slack Delivery</div>
+        <p>The workflow sends the final document or result back to Slack.</p>
+        </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

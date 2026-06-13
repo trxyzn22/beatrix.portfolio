@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+
+  <main class="project-page">
+
+    <a href="html.html" class="back-link">← Back to Projects</a>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="badges">
+        <span class="badge featured">Featured Project</span>
+        <span class="badge green">Open Source</span>
+        <span class="badge purple">Side Project</span>
+        <span class="badge blue">AI/ML</span>
+        <span class="badge green">Completed</span>
+      </div>
+
+      <h1>AI Lead Optimizer (Zapier Workflow)</h1>
+        <p>
+        A multi-path AI-powered lead automation system built with Zapier that classifies,
+        processes, and nurtures incoming leads. The system dynamically routes leads based
+        on conditions, performs AI analysis, and triggers automated email follow-ups and CRM updates.
+        </p>
+    </section>
+
+    <!-- OVERVIEW + INFO -->
+    <section class="two-column">
+      <div class="content-card">
+        <h2>Overview</h2>
+        <p>
+        This system automates lead management by combining conditional routing,
+        AI analysis, and CRM integration. It ensures each lead receives the appropriate
+        response based on their behavior, status, and qualification level, reducing manual work
+        while increasing engagement and conversion rates.
+        </p>
+
+      </div>
+
+      <div class="content-card info-card">
+        <h2>Project Information</h2>
+
+        <div class="info-item">
+        <strong>Role</strong>
+        <p>Automation Developer</p>
+        <p>Workflow Architect</p>
+        </div>
+
+        <div class="info-item">
+        <strong>Focus</strong>
+        <p>Lead Qualification</p>
+        <p>Automated Follow-ups</p>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="content-card">
+      <h2>Technologies & Tools</h2>
+
+        <div class="tech-tags">
+        <span>Zapier</span>
+        <span>OpenAI</span>
+        <span>Notion API</span>
+        <span>Gmail</span>
+        <span>Filter Conditions</span>
+        <span>Paths (Multi-branch Logic)</span>
+        <span>Looping</span>
+        <span>Delay</span>
+        </div>
+
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="content-card">
+      <h2>Challenges & Solutions</h2>
+
+    <div class="challenge">
+    <h3>Handling Multiple Lead Scenarios</h3>
+    <p><strong>Challenge:</strong> Leads required different actions depending on status, behavior, and response timing.</p>
+    <p><strong class="solution">Solution:</strong> Implemented Zapier Paths to route leads into multiple conditional workflows.</p>
+    </div>
+
+    <div class="challenge">
+    <h3>Automating Follow-ups Without Being Spammy</h3>
+    <p><strong>Challenge:</strong> Continuous follow-ups risked overwhelming or annoying leads.</p>
+    <p><strong class="solution">Solution:</strong> Used delays, filters, and conditional checks to send timed and relevant messages.</p>
+    </div>
+
+    <div class="challenge">
+    <h3>Lead Qualification and Prioritization</h3>
+    <p><strong>Challenge:</strong> Identifying high-value leads required manual evaluation.</p>
+    <p><strong class="solution">Solution:</strong> Integrated AI analysis to score and categorize leads automatically.</p>
+    </div>
+
+    <!-- ARCHITECTURE -->
+    <section class="content-card">
+      <h2>Architecture & System Design</h2>
+
+      <div class="architecture-grid">
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Trigger (Notion)</div>
+        <p>Lead data is updated or added in Notion, triggering the workflow.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Path Split</div>
+        <p>Zapier Paths split leads into multiple flows based on conditions.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">AI Analysis</div>
+        <p>AI evaluates lead data and returns structured insights.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">Email Automation</div>
+        <p>Automated emails are sent depending on lead stage and conditions.</p>
+        </div>
+
+        <div class="diagram-card">
+        <div class="diagram-placeholder">CRM Update</div>
+        <p>Notion database is updated with new lead status and actions.</p>
+        </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
+
