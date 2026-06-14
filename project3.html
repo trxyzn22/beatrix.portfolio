@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+
+  <main class="project-page">
+
+    <a href="index.html" class="back-link">← Back to Projects</a>
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="badges">
+        <span class="badge featured">Featured Project</span>
+        <span class="badge purple">Automation</span>
+        <span class="badge blue">Playwright</span>
+        <span class="badge green">n8n</span>
+        <span class="badge green">Completed</span>
+      </div>
+
+      <h1>Facebook Group Auto Poster (n8n + Playwright)</h1>
+
+      <p>
+        A Facebook Group posting automation system built with n8n, Playwright, Google Sheets,
+        Node.js, Express.js, and Cloudflare Tunnel. The project was designed to reduce the time
+        spent manually posting inventory listings to Facebook Groups while keeping human control
+        over inventory updates and caption preparation.
+      </p>
+    </section>
+
+    <!-- OVERVIEW + INFO -->
+    <section class="two-column">
+      <div class="content-card">
+        <h2>Overview</h2>
+
+        <p>
+          This automation helps improve business productivity by reducing repetitive manual work
+          involved in posting inventory listings to Facebook Groups. Instead of manually creating
+          each post one by one, inventory data, captions, image links, posting schedules, and post
+          status are managed through Google Sheets.
+        </p>
+
+        <p>
+          The workflow uses n8n to check scheduled rows, filter posts that are ready and due, and
+          send the post data to a locally hosted Playwright service through Cloudflare Tunnel. The
+          Playwright service opens the Facebook Group, prepares the post composer, downloads the
+          product image, uploads it, and enters the caption.
+        </p>
+
+        <p>
+          A human layer was intentionally kept in the process. Inventory and captions are still
+          manually prepared because the units are fast-moving and are usually one-unit listings.
+          This allows the automation to reduce posting time without sacrificing listing accuracy.
+        </p>
+      </div>
+
+      <div class="content-card info-card">
+        <h2>Project Information</h2>
+
+        <div class="info-item">
+          <strong>Role</strong>
+          <p>Automation Developer</p>
+          <p>Workflow Architect</p>
+        </div>
+
+        <div class="info-item">
+          <strong>Focus</strong>
+          <p>Business Process Automation</p>
+          <p>Social Media Workflow Automation</p>
+        </div>
+
+        <div class="info-item">
+          <strong>Purpose</strong>
+          <p>Reduce repetitive Facebook Group posting</p>
+          <p>Improve posting productivity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="content-card">
+      <h2>Technologies & Tools</h2>
+
+      <div class="tech-tags">
+        <span>n8n</span>
+        <span>Playwright</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>Google Sheets</span>
+        <span>Cloudflare Tunnel</span>
+        <span>JavaScript</span>
+        <span>HTTP Webhooks</span>
+        <span>Google Drive Image Links</span>
+      </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="content-card">
+      <h2>Challenges & Solutions</h2>
+
+      <div class="challenge">
+        <h3>Reducing Manual Facebook Group Posting</h3>
+        <p>
+          <strong>Challenge:</strong> Posting inventory manually to Facebook Groups takes time,
+          especially when listings need images, captions, schedules, and status tracking.
+        </p>
+        <p>
+          <strong class="solution">Solution:</strong> Built an n8n workflow that reads scheduled
+          listings from Google Sheets and sends post data to a Playwright automation service.
+        </p>
+      </div>
+
+      <div class="challenge">
+        <h3>Keeping Human Control Over Inventory</h3>
+        <p>
+          <strong>Challenge:</strong> Inventory moves quickly and many listings are usually one
+          unit only, so fully automated caption and inventory generation could lead to inaccurate
+          posts.
+        </p>
+        <p>
+          <strong class="solution">Solution:</strong> Kept inventory updates and caption
+          preparation as a human-controlled layer while automating the repetitive posting task.
+        </p>
+      </div>
+
+      <div class="challenge">
+        <h3>Working Around Facebook Group API Limitations</h3>
+        <p>
+          <strong>Challenge:</strong> Direct API-based posting to Facebook Groups is limited and
+          not reliable for this use case.
+        </p>
+        <p>
+          <strong class="solution">Solution:</strong> Used Playwright browser automation with a
+          persistent browser profile to perform posting actions through a real browser session,
+          helping reduce platform risk compared to unstable or unofficial direct API approaches.
+        </p>
+      </div>
+
+      <div class="challenge">
+        <h3>Connecting Cloud n8n to a Local Browser Automation Service</h3>
+        <p>
+          <strong>Challenge:</strong> n8n was hosted remotely, while the Playwright browser
+          automation needed to run locally using the same trusted device and Facebook session.
+        </p>
+        <p>
+          <strong class="solution">Solution:</strong> Used Cloudflare Tunnel to securely expose
+          the local Express.js endpoint without opening local network ports.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="content-card">
+      <h2>Architecture & System Design</h2>
+
+      <div class="architecture-grid">
+        <div class="diagram-card">
+          <div class="diagram-placeholder">Google Sheets</div>
+          <p>
+            Stores post data including schedule, group URL, image URL, caption, ID, row number,
+            and posting status.
+          </p>
+        </div>
+
+        <div class="diagram-card">
+          <div class="diagram-placeholder">n8n Scheduler</div>
+          <p>
+            Runs on a schedule, checks the spreadsheet, filters due posts, and sends post data
+            through an HTTP Request node.
+          </p>
+        </div>
+
+        <div class="diagram-card">
+          <div class="diagram-placeholder">Cloudflare Tunnel</div>
+          <p>
+            Bridges the hosted n8n workflow to the local Playwright server running on the user's
+            machine.
+          </p>
+        </div>
+
+        <div class="diagram-card">
+          <div class="diagram-placeholder">Express.js Server</div>
+          <p>
+            Receives post data from n8n through a POST endpoint and passes it to the Playwright
+            automation script.
+          </p>
+        </div>
+
+        <div class="diagram-card">
+          <div class="diagram-placeholder">Playwright</div>
+          <p>
+            Opens a persistent Facebook browser session, prepares the post composer, uploads the
+            image, and enters the caption.
+          </p>
+        </div>
+
+        <div class="diagram-card">
+          <div class="diagram-placeholder">Facebook Groups</div>
+          <p>
+            Receives the prepared inventory post, reducing the need for repetitive manual posting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
