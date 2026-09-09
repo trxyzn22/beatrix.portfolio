@@ -1,139 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Details</title>
+
   <link rel="stylesheet" href="projects.css" />
 </head>
+
 <body>
+
+  <!-- =========================================
+       IMAGE VIEWER
+       ========================================= -->
+
+  <div id="imageViewer" class="image-viewer">
+
+    <div class="image-viewer-window">
+
+      <!-- CLOSE BUTTON -->
+      <button
+        id="imageViewerClose"
+        class="image-viewer-close"
+        type="button"
+        aria-label="Close image viewer"
+      >
+        ×
+      </button>
+
+
+      <!-- =========================================
+           IMAGE AREA
+           ========================================= -->
+
+      <div
+        id="imageViewerContent"
+        class="image-viewer-content"
+      >
+
+        <!-- MAIN IMAGE -->
+        <img
+          id="viewerImage"
+          src=""
+          alt=""
+        />
+
+
+      </div>
+
+
+      <!-- =========================================
+           ZOOM CONTROLS
+           ========================================= -->
+
+      <div class="image-viewer-controls">
+
+        <button
+          id="zoomOut"
+          type="button"
+          aria-label="Zoom out"
+        >
+          −
+        </button>
+
+        <span id="zoomLevel">100%</span>
+
+        <button
+          id="zoomIn"
+          type="button"
+          aria-label="Zoom in"
+        >
+          +
+        </button>
+
+        <button
+          id="zoomReset"
+          type="button"
+        >
+          Reset
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MAIN PROJECT PAGE
+       ========================================= -->
 
   <main class="project-page">
 
-    <a href="index.html" class="back-link">← Back to Projects</a>
+    <!-- BACK LINK -->
 
-    <!-- HERO -->
+    <a
+      href="index.html"
+      class="back-link"
+    >
+      ← Back to Projects
+    </a>
+
+
+    <!-- =========================================
+         HERO
+         ========================================= -->
+
     <section class="project-hero">
+
       <div class="badges">
-        <span class="badge featured">Featured Project</span>
-        <span class="badge green">Open Source</span>
-        <span class="badge purple">Side Project</span>
-        <span class="badge blue">AI/ML</span>
-        <span class="badge green">Completed</span>
+
+        <span class="badge featured">
+          Featured Project
+        </span>
+
+        <span class="badge green">
+          Open Source
+        </span>
+
+        <span class="badge purple">
+          Side Project
+        </span>
+
+        <span class="badge blue">
+          AI/ML
+        </span>
+
+        <span class="badge green">
+          Completed
+        </span>
+
       </div>
 
-      <h1>AI Job Scraper + Resume Optimizer</h1>
 
-        <p>
-        An AI-powered workflow that automates job discovery, job description analysis,
-        resume optimization, and result delivery. The system uses Slack as the trigger,
-        retrieves job data, processes job descriptions with an AI agent, updates a resume
-        document, and sends the optimized output back to Slack.
-        </p>
+      <h1>
+        AI Job Scraper + Resume Optimizer
+      </h1>
+
+
+      <p>
+        An AI-powered workflow that automates job discovery,
+        job description analysis, resume optimization, and
+        result delivery. The system uses Slack as the trigger,
+        retrieves job data, processes job descriptions with
+        an AI agent, updates a resume document, and sends
+        the optimized output back to Slack.
+      </p>
+
     </section>
 
-    <!-- OVERVIEW + INFO -->
+
+    <!-- =========================================
+         OVERVIEW + PROJECT INFORMATION
+         ========================================= -->
+
     <section class="two-column">
+
+      <!-- OVERVIEW -->
+
       <div class="content-card">
-        <h2>Overview</h2>
+
+        <h2>
+          Overview
+        </h2>
+
         <p>
-        This project automates the job application preparation process by combining
-        web scraping, AI analysis, resume tailoring, and document automation. It helps
-        users quickly identify relevant job opportunities and generate a more targeted
-        resume based on the requirements of each job post.
+          This project automates the job application preparation
+          process by combining web scraping, AI analysis, resume
+          tailoring, and document automation. It helps users
+          quickly identify relevant job opportunities and generate
+          a more targeted resume based on the requirements of
+          each job post.
         </p>
+
       </div>
+
+
+      <!-- PROJECT INFORMATION -->
 
       <div class="content-card info-card">
-        <h2>Project Information</h2>
+
+        <h2>
+          Project Information
+        </h2>
+
 
         <div class="info-item">
-        <strong>Role</strong>
-        <p>Automation Developer</p>
-        <p>AI Workflow Designer</p>
+
+          <strong>
+            Role
+          </strong>
+
+          <p>
+            Automation Developer
+          </p>
+
+          <p>
+            AI Workflow Designer
+          </p>
+
         </div>
 
+
         <div class="info-item">
-        <strong>Project Type</strong>
-        <p>AI Automation System</p>
-        <p>Career Productivity Tool</p>
+
+          <strong>
+            Project Type
+          </strong>
+
+          <p>
+            AI Automation System
+          </p>
+
+          <p>
+            Career Productivity Tool
+          </p>
+
         </div>
+
+      </div>
+
     </section>
 
-    <!-- TECHNOLOGIES -->
-    <section class="content-card">
-      <h2>Technologies & Tools</h2>
 
-        <div class="tech-tags">
+    <!-- =========================================
+         TECHNOLOGIES
+         ========================================= -->
+
+    <section class="content-card">
+
+      <h2>
+        Technologies &amp; Tools
+      </h2>
+
+
+      <div class="tech-tags">
+
         <span>n8n</span>
+
         <span>OpenAI</span>
+
         <span>AI Agent</span>
+
         <span>Slack API</span>
+
         <span>Google Drive</span>
+
         <span>Google Docs</span>
+
         <span>HTTP Request</span>
+
         <span>Document Parser</span>
+
         <span>Structured Output Parser</span>
+
         <span>Workflow Automation</span>
-        </div>
+
+      </div>
 
     </section>
 
-    <!-- CHALLENGES -->
+
+    <!-- =========================================
+         CHALLENGES & SOLUTIONS
+         ========================================= -->
+
     <section class="content-card">
-      <h2>Challenges & Solutions</h2>
+
+      <h2>
+        Challenges &amp; Solutions
+      </h2>
+
 
       <div class="challenge">
-        <h3>Automating Job Data Collection</h3>
-        <p><strong>Challenge:</strong> Job post information needed to be collected and processed without manually copying descriptions from multiple sources.</p>
-        <p><strong class="solution">Solution:</strong> Built an automated scraping workflow using HTTP requests and loop processing to retrieve and organize job post data.</p>
-        </div>
 
-        <div class="challenge">
-        <h3>Matching Resume Content to Job Requirements</h3>
-        <p><strong>Challenge:</strong> Generic resumes often fail to highlight the most relevant skills for each specific job posting.</p>
-        <p><strong class="solution">Solution:</strong> Used an AI agent to analyze job descriptions and generate targeted resume improvements based on role requirements.</p>
-        </div>
+        <h3>
+          Automating Job Data Collection
+        </h3>
 
-        <div class="challenge">
-        <h3>Automated Document Updating</h3>
-        <p><strong>Challenge:</strong> Resume updates needed to be saved into a usable document format without manual formatting.</p>
-        <p><strong class="solution">Solution:</strong> Connected Google Drive and Google Docs to copy, update, and store optimized resume versions automatically.</p>
-        </div>
+        <p>
+          <strong>
+            Challenge:
+          </strong>
+
+          Job post information needed to be collected and
+          processed without manually copying descriptions
+          from multiple sources.
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Built an automated scraping workflow using HTTP
+          requests and loop processing to retrieve and
+          organize job post data.
+
+        </p>
+
+      </div>
+
+
+      <div class="challenge">
+
+        <h3>
+          Matching Resume Content to Job Requirements
+        </h3>
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Generic resumes often fail to highlight the most
+          relevant skills for each specific job posting.
+
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Used an AI agent to analyze job descriptions and
+          generate targeted resume improvements based on
+          role requirements.
+
+        </p>
+
+      </div>
+
+
+      <div class="challenge">
+
+        <h3>
+          Automated Document Updating
+        </h3>
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Resume updates needed to be saved into a usable
+          document format without manual formatting.
+
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Connected Google Drive and Google Docs to copy,
+          update, and store optimized resume versions
+          automatically.
+
+        </p>
+
+      </div>
+
     </section>
 
-    <!-- ARCHITECTURE -->
+
+    <!-- =========================================
+         ARCHITECTURE & SYSTEM DESIGN
+         ========================================= -->
+
     <section class="content-card">
-      <h2>Architecture & System Design</h2>
+
+      <h2>
+        Architecture &amp; System Design
+      </h2>
+
 
       <div class="architecture-grid">
-        <div class="diagram-card">
-        <div class="diagram-placeholder">Slack Trigger</div>
-        <p>User sends a command or message to start the job scraping workflow.</p>
-        </div>
+
+
+        <!-- =====================================
+             DIAGRAM 1
+             ===================================== -->
 
         <div class="diagram-card">
-        <div class="diagram-placeholder">Job Scraper</div>
-        <p>HTTP request retrieves job post data and loops through available listings.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="workflow.scraper.png"
+              alt="Job scraper workflow architecture"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            User sends a command or message to start the
+            job scraping workflow.
+          </p>
+
         </div>
 
-        <div class="diagram-card">
-        <div class="diagram-placeholder">AI Resume Optimizer</div>
-        <p>AI agent analyzes the job description and creates tailored resume improvements.</p>
-        </div>
+
+        <!-- =====================================
+             DIAGRAM 2
+             ===================================== -->
 
         <div class="diagram-card">
-        <div class="diagram-placeholder">Google Docs Output</div>
-        <p>Optimized resume content is copied, updated, and saved as a new document.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="http.scraper.png"
+              alt="Job scraper workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            HTTP request retrieves job post data and loops
+            through available listings.
+          </p>
+
         </div>
 
+
+        <!-- =====================================
+             DIAGRAM 3
+             ===================================== -->
+
         <div class="diagram-card">
-        <div class="diagram-placeholder">Slack Delivery</div>
-        <p>The workflow sends the final document or result back to Slack.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="ai.scraper.png"
+              alt="AI resume optimizer workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            AI agent analyzes the job description and creates
+            tailored resume improvements.
+          </p>
+
         </div>
+
+
+        <!-- =====================================
+             DIAGRAM 4
+             ===================================== -->
+
+        <div class="diagram-card">
+
+          <div class="diagram-image">
+
+            <img
+              src="resume.scraper.png"
+              alt="Google Docs resume output workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            Optimized resume content is copied, updated,
+            and saved as a new document.
+          </p>
+
+        </div>
+
+
+        <!-- =====================================
+             DIAGRAM 5
+             ===================================== -->
+
+        <div class="diagram-card">
+
+          <div class="diagram-image">
+
+            <img
+              src="slack.final.scraper.png"
+              alt="Slack delivery workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            The workflow sends the final document or result
+            back to Slack.
+          </p>
+
+        </div>
+
+
+      </div>
+
     </section>
 
   </main>
 
+
+  <!-- =========================================
+       JAVASCRIPT
+       ========================================= -->
+
+  <script src="projects.js"></script>
+
 </body>
+
 </html>

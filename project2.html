@@ -1,136 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Details</title>
+
   <link rel="stylesheet" href="projects.css" />
 </head>
+
 <body>
+
+  <!-- =========================================
+       IMAGE VIEWER
+       ========================================= -->
+
+  <div id="imageViewer" class="image-viewer">
+
+    <div class="image-viewer-window">
+
+      <!-- CLOSE BUTTON -->
+      <button
+        id="imageViewerClose"
+        class="image-viewer-close"
+        type="button"
+        aria-label="Close image viewer"
+      >
+        ×
+      </button>
+
+
+      <!-- =========================================
+           IMAGE AREA
+           ========================================= -->
+
+      <div
+        id="imageViewerContent"
+        class="image-viewer-content"
+      >
+
+        <!-- MAIN IMAGE -->
+        <img
+          id="viewerImage"
+          src=""
+          alt=""
+        />
+
+      </div>
+
+
+      <!-- =========================================
+           ZOOM CONTROLS
+           ========================================= -->
+
+      <div class="image-viewer-controls">
+
+        <button
+          id="zoomOut"
+          type="button"
+          aria-label="Zoom out"
+        >
+          −
+        </button>
+
+        <span id="zoomLevel">100%</span>
+
+        <button
+          id="zoomIn"
+          type="button"
+          aria-label="Zoom in"
+        >
+          +
+        </button>
+
+        <button
+          id="zoomReset"
+          type="button"
+        >
+          Reset
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       MAIN PROJECT PAGE
+       ========================================= -->
 
   <main class="project-page">
 
-    <a href="index.html" class="back-link">← Back to Projects</a>
+    <!-- BACK LINK -->
 
-    <!-- HERO -->
+    <a
+      href="index.html"
+      class="back-link"
+    >
+      ← Back to Projects
+    </a>
+
+
+    <!-- =========================================
+         HERO
+         ========================================= -->
+
     <section class="project-hero">
+
       <div class="badges">
-        <span class="badge featured">Featured Project</span>
-        <span class="badge green">Open Source</span>
-        <span class="badge purple">Side Project</span>
-        <span class="badge blue">AI/ML</span>
-        <span class="badge green">Completed</span>
+
+        <span class="badge featured">
+          Featured Project
+        </span>
+
+        <span class="badge purple">
+          Content Creation
+        </span>
+
+        <span class="badge blue">
+          AI/ML
+        </span>
+
+        <span class="badge green">
+          Completed
+        </span>
+
       </div>
 
-      <h1>AI Lead Optimizer (Zapier Workflow)</h1>
-        <p>
-        A multi-path AI-powered lead automation system built with Zapier that classifies,
-        processes, and nurtures incoming leads. The system dynamically routes leads based
-        on conditions, performs AI analysis, and triggers automated email follow-ups and CRM updates.
-        </p>
+
+      <h1>
+        AI Multi-Platform Content Automation
+      </h1>
+
+
+      <p>
+        An AI-powered content marketing workflow that converts
+        uploaded audio or video into optimized social media posts.
+        The system automatically transcribes content, generates
+        platform-specific captions, and publishes them directly
+        to LinkedIn and Facebook.
+      </p>
+
     </section>
 
-    <!-- OVERVIEW + INFO -->
+
+    <!-- =========================================
+         OVERVIEW + PROJECT INFORMATION
+         ========================================= -->
+
     <section class="two-column">
+
+      <!-- OVERVIEW -->
+
       <div class="content-card">
-        <h2>Overview</h2>
+
+        <h2>
+          Overview
+        </h2>
+
         <p>
-        This system automates lead management by combining conditional routing,
-        AI analysis, and CRM integration. It ensures each lead receives the appropriate
-        response based on their behavior, status, and qualification level, reducing manual work
-        while increasing engagement and conversion rates.
+          This workflow automates content repurposing from a
+          single uploaded recording. Using AI transcription and
+          content generation, it creates optimized social media
+          posts tailored for different platforms, eliminating
+          repetitive manual work while maintaining consistent
+          brand messaging.
         </p>
 
       </div>
+
+
+      <!-- PROJECT INFORMATION -->
 
       <div class="content-card info-card">
-        <h2>Project Information</h2>
+
+        <h2>
+          Project Information
+        </h2>
+
 
         <div class="info-item">
-        <strong>Role</strong>
-        <p>Automation Developer</p>
-        <p>Workflow Architect</p>
+
+          <strong>
+            Role
+          </strong>
+
+          <p>
+            Automation Developer
+          </p>
+
+          <p>
+            AI Workflow Engineer
+          </p>
+
         </div>
 
+
         <div class="info-item">
-        <strong>Focus</strong>
-        <p>Lead Qualification</p>
-        <p>Automated Follow-ups</p>
+
+          <strong>
+            Project Type
+          </strong>
+
+          <p>
+            Content Marketing Automation
+          </p>
+
+          <p>
+            Social Media Workflow
+          </p>
+
         </div>
+
+      </div>
+
     </section>
 
-    <!-- TECHNOLOGIES -->
-    <section class="content-card">
-      <h2>Technologies & Tools</h2>
 
-        <div class="tech-tags">
+    <!-- =========================================
+         TECHNOLOGIES
+         ========================================= -->
+
+    <section class="content-card">
+
+      <h2>
+        Technologies &amp; Tools
+      </h2>
+
+
+      <div class="tech-tags">
+
         <span>Zapier</span>
+
         <span>OpenAI</span>
-        <span>Notion API</span>
-        <span>Gmail</span>
-        <span>Filter Conditions</span>
-        <span>Paths (Multi-branch Logic)</span>
+
+        <span>AI Transcription</span>
+
+        <span>Google Drive</span>
+
+        <span>LinkedIn API</span>
+
+        <span>Facebook Pages API</span>
+
+        <span>Paths</span>
+
         <span>Looping</span>
-        <span>Delay</span>
-        </div>
+
+        <span>Filters</span>
+
+      </div>
 
     </section>
 
-    <!-- CHALLENGES -->
+
+    <!-- =========================================
+         CHALLENGES & SOLUTIONS
+         ========================================= -->
+
     <section class="content-card">
-      <h2>Challenges & Solutions</h2>
 
-    <div class="challenge">
-    <h3>Handling Multiple Lead Scenarios</h3>
-    <p><strong>Challenge:</strong> Leads required different actions depending on status, behavior, and response timing.</p>
-    <p><strong class="solution">Solution:</strong> Implemented Zapier Paths to route leads into multiple conditional workflows.</p>
-    </div>
+      <h2>
+        Challenges &amp; Solutions
+      </h2>
 
-    <div class="challenge">
-    <h3>Automating Follow-ups Without Being Spammy</h3>
-    <p><strong>Challenge:</strong> Continuous follow-ups risked overwhelming or annoying leads.</p>
-    <p><strong class="solution">Solution:</strong> Used delays, filters, and conditional checks to send timed and relevant messages.</p>
-    </div>
 
-    <div class="challenge">
-    <h3>Lead Qualification and Prioritization</h3>
-    <p><strong>Challenge:</strong> Identifying high-value leads required manual evaluation.</p>
-    <p><strong class="solution">Solution:</strong> Integrated AI analysis to score and categorize leads automatically.</p>
-    </div>
+      <!-- =====================================
+           CHALLENGE 1
+           ===================================== -->
 
-    <!-- ARCHITECTURE -->
+      <div class="challenge">
+
+        <h3>
+          Repurposing Long-Form Content
+        </h3>
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Creating separate social media posts for multiple
+          platforms required repetitive manual editing and
+          formatting.
+
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          AI automatically converts transcripts into concise,
+          platform-optimized content for each destination.
+
+        </p>
+
+      </div>
+
+
+      <!-- =====================================
+           CHALLENGE 2
+           ===================================== -->
+
+      <div class="challenge">
+
+        <h3>
+          Platform-Specific Content Formatting
+        </h3>
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Each social media platform requires different
+          formatting and publishing logic.
+
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Zapier Paths route generated content into dedicated
+          publishing workflows for LinkedIn and Facebook.
+
+        </p>
+
+      </div>
+
+
+      <!-- =====================================
+           CHALLENGE 3
+           ===================================== -->
+
+      <div class="challenge">
+
+        <h3>
+          Automating Content Distribution
+        </h3>
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Publishing the same content manually across multiple
+          channels was time-consuming.
+
+        </p>
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Integrated APIs automatically publish approved
+          AI-generated content immediately after processing.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ARCHITECTURE & SYSTEM DESIGN
+         ========================================= -->
+
     <section class="content-card">
-      <h2>Architecture & System Design</h2>
+
+      <h2>
+        Architecture &amp; System Design
+      </h2>
+
 
       <div class="architecture-grid">
-        <div class="diagram-card">
-        <div class="diagram-placeholder">Trigger (Notion)</div>
-        <p>Lead data is updated or added in Notion, triggering the workflow.</p>
-        </div>
+
+
+        <!-- =====================================
+             DIAGRAM 1
+             ===================================== -->
 
         <div class="diagram-card">
-        <div class="diagram-placeholder">Path Split</div>
-        <p>Zapier Paths split leads into multiple flows based on conditions.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="upload.repurpose.png"
+              alt="Google Drive content upload trigger"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            Content creators upload audio or video through
+            a Google Drive upload.
+          </p>
+
         </div>
 
-        <div class="diagram-card">
-        <div class="diagram-placeholder">AI Analysis</div>
-        <p>AI evaluates lead data and returns structured insights.</p>
-        </div>
+
+        <!-- =====================================
+             DIAGRAM 2
+             ===================================== -->
 
         <div class="diagram-card">
-        <div class="diagram-placeholder">Email Automation</div>
-        <p>Automated emails are sent depending on lead stage and conditions.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="ai.repurpose.png"
+              alt="AI transcription workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            OpenAI converts uploaded media into an editable
+            transcript.
+          </p>
+
         </div>
 
+
+        <!-- =====================================
+             DIAGRAM 3
+             ===================================== -->
+
         <div class="diagram-card">
-        <div class="diagram-placeholder">CRM Update</div>
-        <p>Notion database is updated with new lead status and actions.</p>
+
+          <div class="diagram-image">
+
+            <img
+              src="blog.repurpose.png"
+              alt="AI content generation workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            AI rewrites the transcript into engaging social
+            media posts.
+          </p>
+
         </div>
+
+
+        <!-- =====================================
+             DIAGRAM 4
+             ===================================== -->
+
+        <div class="diagram-card">
+
+          <div class="diagram-image">
+
+            <img
+              src="path.repurpose.png"
+              alt="Social media platform routing workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            Zapier Paths determine which platforms receive
+            each version of the content.
+          </p>
+
+        </div>
+
+
+        <!-- =====================================
+             DIAGRAM 5
+             ===================================== -->
+
+        <div class="diagram-card">
+
+          <div class="diagram-image">
+
+            <img
+              src="posted.repurpose.png"
+              alt="Automatic social media publishing workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+          <p>
+            Posts are automatically published to LinkedIn
+            and Facebook Pages.
+          </p>
+
+        </div>
+
+
+      </div>
+
     </section>
 
   </main>
 
-</body>
-</html>
 
+  <!-- =========================================
+       JAVASCRIPT
+       ========================================= -->
+
+  <script src="projects.js"></script>
+
+</body>
+
+</html>

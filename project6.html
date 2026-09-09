@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Facebook Group Auto Poster</title>
+  <title>GHL Auto Detailing & Tint Business Automation</title>
 
   <link rel="stylesheet" href="projects.css" />
 </head>
@@ -125,11 +125,11 @@
         </span>
 
         <span class="badge blue">
-          Playwright
+          GoHighLevel
         </span>
 
         <span class="badge green">
-          n8n
+          CRM
         </span>
 
         <span class="badge green">
@@ -140,17 +140,17 @@
 
 
       <h1>
-        Facebook Group Auto Poster (n8n + Playwright)
+        GHL Auto Detailing &amp; Tint Business Automation
       </h1>
 
 
       <p>
-        A Facebook Group posting automation system built with
-        n8n, Playwright, Google Sheets, Node.js, Express.js,
-        and Cloudflare Tunnel. The project was designed to
-        reduce the time spent manually posting inventory
-        listings to Facebook Groups while keeping human control
-        over inventory updates and caption preparation.
+        A GoHighLevel automation system designed for an
+        auto detailing and window tint business. The setup
+        manages the complete customer journey from initial
+        inquiry and quotation follow-up to booking, deposit
+        collection, appointment reminders, and long-term
+        maintenance follow-up.
       </p>
 
     </section>
@@ -174,34 +174,29 @@
 
 
         <p>
-          This automation helps improve business productivity
-          by reducing repetitive manual work involved in
-          posting inventory listings to Facebook Groups.
-          Instead of manually creating each post one by one,
-          inventory data, captions, image links, posting
-          schedules, and post status are managed through
-          Google Sheets.
+          This project is a GoHighLevel CRM and workflow
+          automation setup designed to organize and automate
+          the customer journey for an auto detailing and
+          window tint business.
         </p>
 
 
         <p>
-          The workflow uses n8n to check scheduled rows,
-          filter posts that are ready and due, and send the
-          post data to a locally hosted Playwright service
-          through Cloudflare Tunnel. The Playwright service
-          opens the Facebook Group, prepares the post composer,
-          downloads the product image, uploads it, and enters
-          the caption.
+          The system begins when a potential customer submits
+          an inquiry through a custom website form. The form
+          creates the contact, applies the appropriate service
+          tags, and sends an SMS acknowledgement.
         </p>
 
 
         <p>
-          A human layer was intentionally kept in the process.
-          Inventory and captions are still manually prepared
-          because the units are fast-moving and are usually
-          one-unit listings. This allows the automation to
-          reduce posting time without sacrificing listing
-          accuracy.
+          From there, automated workflows manage quotation
+          follow-ups, booking reminders, appointment
+          confirmation, deposit requirements, appointment
+          reminders, and recurring maintenance notifications.
+          Human interaction is retained where necessary,
+          particularly for quotation handling and staff
+          assignment.
         </p>
 
       </div>
@@ -237,15 +232,15 @@
         <div class="info-item">
 
           <strong>
-            Focus
+            Project Type
           </strong>
 
           <p>
-            Business Process Automation
+            CRM Automation System
           </p>
 
           <p>
-            Social Media Workflow Automation
+            Automotive Service Workflow
           </p>
 
         </div>
@@ -254,15 +249,15 @@
         <div class="info-item">
 
           <strong>
-            Purpose
+            Platform
           </strong>
 
           <p>
-            Reduce repetitive Facebook Group posting
+            GoHighLevel
           </p>
 
           <p>
-            Improve posting productivity
+            CRM &amp; Workflow Automation
           </p>
 
         </div>
@@ -287,39 +282,51 @@
       <div class="tech-tags">
 
         <span>
-          n8n
+          GoHighLevel
         </span>
 
         <span>
-          Playwright
+          GHL CRM
         </span>
 
         <span>
-          Node.js
+          GHL Workflows
         </span>
 
         <span>
-          Express.js
+          Website Forms
         </span>
 
         <span>
-          Google Sheets
+          SMS Automation
         </span>
 
         <span>
-          Cloudflare Tunnel
+          Appointment Calendars
         </span>
 
         <span>
-          JavaScript
+          Contact Management
         </span>
 
         <span>
-          HTTP Webhooks
+          Tags
         </span>
 
         <span>
-          Google Drive Image Links
+          Pipeline Automation
+        </span>
+
+        <span>
+          Conditional Branching
+        </span>
+
+        <span>
+          Follow-Up Automation
+        </span>
+
+        <span>
+          Appointment Reminders
         </span>
 
       </div>
@@ -344,7 +351,7 @@
       <div class="challenge">
 
         <h3>
-          Reducing Manual Facebook Group Posting
+          Managing New Customer Inquiries
         </h3>
 
 
@@ -354,9 +361,9 @@
             Challenge:
           </strong>
 
-          Posting inventory manually to Facebook Groups
-          takes time, especially when listings need images,
-          captions, schedules, and status tracking.
+          New inquiries needed to be organized quickly
+          while identifying which automotive service the
+          customer was interested in.
 
         </p>
 
@@ -367,9 +374,9 @@
             Solution:
           </strong>
 
-          Built an n8n workflow that reads scheduled
-          listings from Google Sheets and sends post data
-          to a Playwright automation service.
+          Built a website form integration that automatically
+          creates the contact, applies service-specific tags,
+          and sends an SMS acknowledgement after submission.
 
         </p>
 
@@ -382,7 +389,7 @@
       <div class="challenge">
 
         <h3>
-          Keeping Human Control Over Inventory
+          Maintaining Consistent Quotation Follow-Up
         </h3>
 
 
@@ -392,10 +399,9 @@
             Challenge:
           </strong>
 
-          Inventory moves quickly and many listings are
-          usually one unit only, so fully automated caption
-          and inventory generation could lead to inaccurate
-          posts.
+          Potential customers who received quotations could
+          become inactive, requiring staff to manually remember
+          when and how often to follow up.
 
         </p>
 
@@ -406,9 +412,10 @@
             Solution:
           </strong>
 
-          Kept inventory updates and caption preparation
-          as a human-controlled layer while automating
-          the repetitive posting task.
+          Created a five-step follow-up workflow with
+          escalating follow-up intervals. A separate branch
+          handles positive replies and assigns the lead to
+          an appropriate staff member.
 
         </p>
 
@@ -421,7 +428,7 @@
       <div class="challenge">
 
         <h3>
-          Working Around Facebook Group API Limitations
+          Recovering Customers Who Do Not Complete Booking
         </h3>
 
 
@@ -431,8 +438,9 @@
             Challenge:
           </strong>
 
-          Direct API-based posting to Facebook Groups is
-          limited and not reliable for this use case.
+          Customers who proceed toward booking may fail to
+          confirm their appointment, resulting in lost
+          opportunities.
 
         </p>
 
@@ -443,11 +451,10 @@
             Solution:
           </strong>
 
-          Used Playwright browser automation with a
-          persistent browser profile to perform posting
-          actions through a real browser session, helping
-          reduce platform risk compared to unstable or
-          unofficial direct API approaches.
+          Implemented a dedicated booking reminder workflow
+          that sends four follow-ups with escalating time
+          intervals when the customer does not confirm
+          their appointment.
 
         </p>
 
@@ -460,8 +467,7 @@
       <div class="challenge">
 
         <h3>
-          Connecting Cloud n8n to a Local Browser
-          Automation Service
+          Managing Appointment Confirmation and Deposits
         </h3>
 
 
@@ -471,9 +477,10 @@
             Challenge:
           </strong>
 
-          n8n was hosted remotely, while the Playwright
-          browser automation needed to run locally using
-          the same trusted device and Facebook session.
+          A booked appointment still required a downpayment
+          to secure the customer's slot. Customers who failed
+          to provide the required payment needed to be handled
+          separately.
 
         </p>
 
@@ -484,9 +491,86 @@
             Solution:
           </strong>
 
-          Used Cloudflare Tunnel to securely expose the
-          local Express.js endpoint without opening local
-          network ports.
+          Built separate booking confirmation and deposit
+          workflows. A timeout is applied to customers who
+          do not provide the required downpayment, after which
+          they are required to rebook.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CHALLENGE 5 -->
+
+      <div class="challenge">
+
+        <h3>
+          Reducing Appointment No-Shows
+        </h3>
+
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Customers may forget their scheduled appointment,
+          especially when the booking occurs several days
+          before the actual service.
+
+        </p>
+
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Added automated appointment reminders that send a
+          gentle reminder a few hours before the appointment,
+          followed by additional post-appointment communication.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CHALLENGE 6 -->
+
+      <div class="challenge">
+
+        <h3>
+          Automating Long-Term Customer Maintenance
+        </h3>
+
+
+        <p>
+
+          <strong>
+            Challenge:
+          </strong>
+
+          Coating customers may require periodic maintenance,
+          but manually tracking when each customer is due can
+          result in missed opportunities.
+
+        </p>
+
+
+        <p>
+
+          <strong class="solution">
+            Solution:
+          </strong>
+
+          Created a maintenance coating workflow that
+          automatically sends a reminder six months after
+          the customer's coating service.
 
         </p>
 
@@ -511,7 +595,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 1
+             WORKFLOW 1
              ===================================== -->
 
         <div class="diagram-card">
@@ -519,8 +603,8 @@
           <div class="diagram-image">
 
             <img
-              src="sheets.poster.png"
-              alt="Google Sheets inventory and posting data"
+              src="1lead_intake.ghl.png"
+              alt="GHL new lead intake workflow"
               class="zoomable-image"
             />
 
@@ -528,9 +612,12 @@
 
 
           <p>
-            Stores post data including schedule, group URL,
-            image URL, caption, ID, row number, and posting
-            status.
+
+            New leads enter the system through a custom
+            website form. The workflow creates the contact,
+            applies the necessary service tags, and sends
+            an SMS acknowledging the inquiry.
+
           </p>
 
         </div>
@@ -538,7 +625,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 2
+             WORKFLOW 2
              ===================================== -->
 
         <div class="diagram-card">
@@ -546,8 +633,8 @@
           <div class="diagram-image">
 
             <img
-              src="workflow.poster.png"
-              alt="Facebook Group posting scheduler"
+              src="2quotation.ghl.jpg"
+              alt="GHL quotation follow-up workflow"
               class="zoomable-image"
             />
 
@@ -555,9 +642,12 @@
 
 
           <p>
-            Runs on a schedule, checks the spreadsheet,
-            filters due posts, and sends post data through
-            an HTTP Request node.
+
+            After a quotation is manually sent, the workflow
+            performs up to five follow-ups if there is no
+            response. A positive reply branches into a staff
+            assignment workflow.
+
           </p>
 
         </div>
@@ -565,7 +655,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 3
+             WORKFLOW 3.1
              ===================================== -->
 
         <div class="diagram-card">
@@ -573,8 +663,8 @@
           <div class="diagram-image">
 
             <img
-              src="tunnel.poster.png"
-              alt="Cloudflare Tunnel connection"
+              src="3.1booking_reminder.ghl.jpg"
+              alt="GHL booking reminder workflow"
               class="zoomable-image"
             />
 
@@ -582,8 +672,12 @@
 
 
           <p>
-            Bridges the hosted n8n workflow to the local
-            Playwright server running on the user's machine.
+
+            Customers who proceed toward booking receive an
+            appointment-related message. Four follow-ups are
+            triggered if the customer does not confirm their
+            selected slot, using escalating time intervals.
+
           </p>
 
         </div>
@@ -591,7 +685,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 4
+             WORKFLOW 3.2
              ===================================== -->
 
         <div class="diagram-card">
@@ -599,8 +693,8 @@
           <div class="diagram-image">
 
             <img
-              src="server.poster.png"
-              alt="Express.js Playwright server"
+              src="3.2booking_confirmed.ghl.png"
+              alt="GHL booking confirmed workflow"
               class="zoomable-image"
             />
 
@@ -608,9 +702,12 @@
 
 
           <p>
-            Receives post data from n8n through a POST
-            endpoint and passes it to the Playwright
-            automation script.
+
+            Once the customer successfully books an
+            appointment, the contact is automatically moved
+            into the booking confirmed stage for the next
+            part of the customer journey.
+
           </p>
 
         </div>
@@ -618,7 +715,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 5
+             WORKFLOW 4
              ===================================== -->
 
         <div class="diagram-card">
@@ -626,8 +723,8 @@
           <div class="diagram-image">
 
             <img
-              src="posting.poster.png"
-              alt="Playwright Facebook browser automation"
+              src="4deposit.ghl.png"
+              alt="GHL deposit workflow"
               class="zoomable-image"
             />
 
@@ -635,9 +732,12 @@
 
 
           <p>
-            Opens a persistent Facebook browser session,
-            prepares the post composer, uploads the image,
-            and enters the caption.
+
+            A required downpayment is used to secure the
+            customer's appointment. A timeout is applied when
+            the payment is not received, requiring the customer
+            to rebook their appointment.
+
           </p>
 
         </div>
@@ -645,7 +745,7 @@
 
 
         <!-- =====================================
-             DIAGRAM 6
+             WORKFLOW 5
              ===================================== -->
 
         <div class="diagram-card">
@@ -653,8 +753,8 @@
           <div class="diagram-image">
 
             <img
-              src="posted.poster.png"
-              alt="Facebook Groups posting destination"
+              src="5booked_reminder.ghl.jpg"
+              alt="GHL booked appointment reminder workflow"
               class="zoomable-image"
             />
 
@@ -662,8 +762,41 @@
 
 
           <p>
-            Receives the prepared inventory post, reducing
-            the need for repetitive manual posting.
+
+            After the booking is successfully secured with
+            the required downpayment, automated reminders are
+            sent a few hours before the appointment, followed
+            by additional post-appointment reminders.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- =====================================
+             WORKFLOW 6
+             ===================================== -->
+
+        <div class="diagram-card">
+
+          <div class="diagram-image">
+
+            <img
+              src="6maintenance_reminder.ghl.png"
+              alt="GHL maintenance coating reminder workflow"
+              class="zoomable-image"
+            />
+
+          </div>
+
+
+          <p>
+
+            Customers who have received a coating service are
+            automatically followed up after six months with
+            a maintenance coating reminder.
+
           </p>
 
         </div>

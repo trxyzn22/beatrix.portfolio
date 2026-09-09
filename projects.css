@@ -24,15 +24,242 @@ body {
   font-weight: 600;
 }
 
+
+/* =========================================
+   PROJECT IMAGE
+   ========================================= */
+
+.diagram-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: zoom-in;
+  background: #f8fafc;
+}
+
+.diagram-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =========================================
+   IMAGE VIEWER OVERLAY
+   ========================================= */
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  /* IMPORTANT:
+     Hidden until an image is clicked */
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  padding: 20px;
+}
+
+/* Only show after JavaScript adds .active */
+.image-viewer.active {
+  display: flex;
+}
+
+
+/* =========================================
+   VIEWER WINDOW
+   ========================================= */
+
+.image-viewer-window {
+  position: relative;
+
+  width: min(1100px, 94vw);
+  height: min(750px, 90vh);
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.image-viewer-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 20;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease;
+}
+
+.image-viewer-close:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+
+/* =========================================
+   IMAGE AREA
+   ========================================= */
+
+.image-viewer-content {
+  position: relative;
+
+  flex: 1;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: grab;
+
+  user-select: none;
+}
+
+.image-viewer-content.dragging {
+  cursor: grabbing;
+}
+
+
+/* =========================================
+   VIEWER IMAGE
+   ========================================= */
+
+.image-viewer-content > img {
+  position: absolute;
+
+  max-width: none;
+  max-height: none;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  transition: transform 0.15s ease;
+}
+
+.image-viewer-content.dragging > img {
+  transition: none;
+}
+
+
+/* =========================================
+   VIEWER CONTROLS
+   ========================================= */
+
+.image-viewer-controls {
+  height: 76px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  background: #ffffff;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.image-viewer-controls button {
+  border: none;
+
+  min-width: 48px;
+  height: 46px;
+
+  padding: 0 16px;
+
+  border-radius: 10px;
+
+  background: #eeeeee;
+
+  color: #111;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.image-viewer-controls button:hover {
+  background: #dddddd;
+}
+
+.image-viewer-controls button:active {
+  transform: scale(0.95);
+}
+
+#zoomLevel {
+  min-width: 60px;
+
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PROJECT HERO
+   ========================================= */
+
 .project-hero {
   margin-bottom: 45px;
 }
-
-.content-card .tech-tags span:hover{
- transform: translateY(-2px);
- background: rgb(219, 219, 219);
-}
-
 
 .badges {
   display: flex;
@@ -46,7 +273,9 @@ body {
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .featured {
@@ -79,47 +308,82 @@ body {
 .project-hero p {
   font-size: 21px;
   line-height: 1.6;
+
   max-width: 1100px;
+
   color: #1e293b;
+
   margin-bottom: 30px;
 }
 
 .github-btn {
   display: inline-block;
+
   background: #0f172a;
   color: white;
+
   padding: 14px 26px;
+
   border-radius: 8px;
+
   text-decoration: none;
+
   font-weight: 700;
 }
 
+
+/* =========================================
+   TWO COLUMN
+   ========================================= */
+
 .two-column {
   display: grid;
+
   grid-template-columns: 2fr 1fr;
+
   gap: 30px;
+
   margin-bottom: 40px;
 }
 
+
+/* =========================================
+   CONTENT CARDS
+   ========================================= */
+
 .content-card {
   background: white;
+
   border: 1px solid #dbe3ef;
+
   border-radius: 16px;
+
   padding: 32px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+
+  box-shadow:
+    0 6px 18px rgba(15, 23, 42, 0.05);
+
   margin-bottom: 40px;
 }
 
 .content-card h2 {
   font-size: 30px;
+
   margin-bottom: 22px;
 }
 
 .content-card p {
   font-size: 18px;
+
   line-height: 1.7;
+
   color: #1e293b;
 }
+
+
+/* =========================================
+   INFO
+   ========================================= */
 
 .info-item {
   margin-bottom: 24px;
@@ -133,22 +397,49 @@ body {
   font-size: 16px;
 }
 
+
+/* =========================================
+   TECHNOLOGIES
+   ========================================= */
+
 .tech-tags {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
 }
 
 .tech-tags span {
   border: 1px solid #cbd5e1;
+
   border-radius: 8px;
+
   padding: 7px 14px;
+
   background: #f8fafc;
+
   font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
+
+.content-card .tech-tags span:hover {
+  transform: translateY(-2px);
+
+  background: rgb(219, 219, 219);
+}
+
+
+/* =========================================
+   CHALLENGES
+   ========================================= */
 
 .challenge {
   padding: 22px 0;
+
   border-bottom: 1px solid #dbe3ef;
 }
 
@@ -158,6 +449,7 @@ body {
 
 .challenge h3 {
   font-size: 21px;
+
   margin-bottom: 14px;
 }
 
@@ -165,36 +457,60 @@ body {
   color: #059669;
 }
 
+
+/* =========================================
+   ARCHITECTURE
+   ========================================= */
+
 .architecture-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
   gap: 24px;
 }
 
 .diagram-card {
   border: 1px solid #dbe3ef;
+
   border-radius: 12px;
+
   overflow: hidden;
+
   background: #f8fafc;
 }
 
 .diagram-placeholder {
   height: 260px;
+
   background: #e5e7eb;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   color: #64748b;
+
   font-weight: 700;
 }
 
 .diagram-card p {
   padding: 22px;
+
   text-align: center;
+
   font-size: 17px;
 }
 
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media (max-width: 900px) {
+
   .project-hero h1 {
     font-size: 42px;
   }
@@ -207,4 +523,36 @@ body {
   .architecture-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+@media (max-width: 700px) {
+
+  .project-page {
+    padding: 50px 20px;
+  }
+
+  .image-viewer {
+    padding: 10px;
+  }
+
+  .image-viewer-window {
+    width: 96vw;
+    height: 90vh;
+
+    border-radius: 14px;
+  }
+
+  .image-viewer-controls {
+    height: 65px;
+  }
+
+  .image-viewer-close {
+    width: 42px;
+    height: 42px;
+
+    font-size: 24px;
+  }
+
+
 }
