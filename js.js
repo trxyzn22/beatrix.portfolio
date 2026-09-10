@@ -5,8 +5,25 @@ const navLinks = document.querySelectorAll(".nav-links a");
 const navPill = document.querySelector(".nav-pill");
 const themeIcon = themeToggle?.querySelector("i");
 
+const STORAGE_KEY = "theme";
+
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const savedTheme = localStorage.getItem("portfolio-theme");
+const savedTheme = localStorage.getItem(STORAGE_KEY);
+
+// Decide initial theme: saved value wins, otherwise fall back to system preference
+const initialIsDark = savedTheme ? savedTheme === "dark" : prefersDark;
+
+if (initialIsDark) {
+  document.body.classList.add("dark-mode");
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  const isDark = document.body.classList.contains("dark-mode");
+
+  localStorage.setItem(STORAGE_KEY, isDark ? "dark" : "light");
+});
 
 if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
   document.body.classList.add("dark");

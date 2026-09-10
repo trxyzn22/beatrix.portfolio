@@ -556,3 +556,94 @@ body {
 
 
 }
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+html.dark-mode body {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+html.dark-mode .back-link {
+  color: #f8fafc;
+}
+
+html.dark-mode .project-hero p {
+  color: #cbd5e1;
+}
+
+html.dark-mode .content-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+html.dark-mode .content-card p {
+  color: #cbd5e1;
+}
+
+html.dark-mode .info-item strong {
+  color: #f8fafc;
+}
+
+html.dark-mode .tech-tags span {
+  background: #0f172a;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+html.dark-mode .content-card .tech-tags span:hover {
+  background: #334155;
+}
+
+html.dark-mode .challenge {
+  border-bottom-color: #334155;
+}
+
+html.dark-mode .challenge h3 {
+  color: #f8fafc;
+}
+
+html.dark-mode .diagram-card {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+html.dark-mode .diagram-card p {
+  color: #cbd5e1;
+}
+
+html.dark-mode .diagram-placeholder {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+/* IMAGE VIEWER */
+
+html.dark-mode .image-viewer-window {
+  background: #1e293b;
+}
+
+html.dark-mode .image-viewer-content {
+  background: #0f172a;
+}
+
+html.dark-mode .image-viewer-controls {
+  background: #1e293b;
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+html.dark-mode .image-viewer-controls button {
+  background: #334155;
+  color: #f8fafc;
+}
+
+html.dark-mode .image-viewer-controls button:hover {
+  background: #475569;
+}
+
+html.dark-mode #zoomLevel {
+  color: #f8fafc;
+}
